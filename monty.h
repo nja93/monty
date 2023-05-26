@@ -39,7 +39,9 @@ typedef struct instruction_s
 } instruction_t;
 
 
-
+int main(int argc, char *argv[]);
+void exe(stack_t **stack, unsigned int line_number, char *opcode, char *args);
+void execute_file(const char *filename);
 void pop(stack_t **stack, unsigned int line_number);
 
 
