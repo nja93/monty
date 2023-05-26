@@ -5,9 +5,9 @@
 #include <string.h>
 #include <stddef.h>
 #include <stdlib.h>
-#include <<sys/types.h>
+#include <sys/types.h>
 #include <string.h>
-#include <<ctype.h>
+#include <ctype.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -43,6 +43,11 @@ int main(int argc, char *argv[]);
 void exe(stack_t **stack, unsigned int line_number, char *opcode, char *args);
 void execute_file(const char *filename);
 void pop(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack);
+void swap(stack_t **stack, unsigned int line_number);
+void push(stack_t **stack, unsigned int line_number, char *argument);
+
 
 
 #endif
