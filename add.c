@@ -11,8 +11,8 @@
 void add(stack_t **stack, unsigned int line_number)
 {
 	int get_sum; /*value will be stored in get_sum*/
-	int top;
-	int bottom;
+	int first;
+	int second;
 
 	/*check if stack is has 2 elements*/
 	if ((*stack)->next == NULL || (*stack == NULL))
@@ -21,10 +21,10 @@ void add(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	top= (*stack)->n;
-	bottom = (*stack)->next->n;
+	first = (*stack)->n;
+	second = (*stack)->next->n;
 
-	get_sum = top + bottom;
+	get_sum = first + second;
 
 	pop(stack, line_number); /*top element removed*/
 	(*stack)->n = get_sum;
