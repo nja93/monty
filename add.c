@@ -11,6 +11,8 @@
 void add(stack_t **stack, unsigned int line_number)
 {
 	int get_sum; /*value will be stored in get_sum*/
+	int top;
+	int bottom;
 
 	/*check if stack is has 2 elements*/
 	if ((*stack)->next == NULL || (*stack == NULL))
@@ -19,8 +21,8 @@ void add(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	int top = (*stack)->n;
-	int bottom = (*stack)->next->n;
+	top= (*stack)->n;
+	bottom = (*stack)->next->n;
 
 	get_sum = top + bottom;
 
@@ -37,7 +39,8 @@ void add(stack_t **stack, unsigned int line_number)
 void sub(stack_t **stack, unsigned int line_number)
 {
 	int get_sub; /*value will be stored in get_sub*/
-
+	int top;
+	int bottom;
 	/*check if stack is has 2 elements*/
 
 	if ((*stack)->next == NULL || (*stack == NULL))
@@ -46,8 +49,8 @@ void sub(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	int top = (*stack)->n;
-	int bottom = (*stack)->next->n;
+	top = (*stack)->n;
+	bottom = (*stack)->next->n;
 
 	get_sub = top - bottom;
 

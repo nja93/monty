@@ -90,7 +90,7 @@ void execute_file(const char *filename)
 		exit(EXIT_FAILURE);
 	}
 
-	while ((read = getline(&line, &len, file)) != -1)
+	while ((read = getline(&line, &length, file)) != -1)
 {
 	/**execute the code line y line*/
 	line_number++;
@@ -103,5 +103,5 @@ void execute_file(const char *filename)
 	}
 }
 
-	cleanup(file, line, &stack);
+	free_mem(file, line, &stack);
 }
