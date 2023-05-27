@@ -1,3 +1,9 @@
+#include "monty.h"
+/**
+ * sub -fn that subtracts the top element from the next
+ * @stack: ptr to the top node
+ * @line_number: position of line
+ */
 void sub(stack_t **stack, unsigned int line_number)
 {
 	int get_sub; /*value will be stored in get_sub*/

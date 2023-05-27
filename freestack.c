@@ -7,13 +7,17 @@
  */
 void free_mem(FILE *file, char *line, stack_t **stack)
 {
+	stack_t *current;
+	stack_t *next;
+
 	free(line);
 	fclose(file);
-	stack_t *current = *stack;
+
+	current = *stack;
 
 	while (current != NULL)
 	{
-		stack_t *next = current->next;
+		next = current->next;
 
 		free(current);
 		current = next;
