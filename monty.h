@@ -51,7 +51,7 @@ void sub(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void free_mem(FILE *file, char *line, stack_t **stack);
-int is_integer(const char *str);
+int is_int(const char *str);
 
 
 

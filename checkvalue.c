@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
- * is_integer - fn that checks if string has an int
+ * is_int - fn that checks if string has an int
  * @str: ...
  * by Lorna
  * Return: 0 if not an int and 1 if it is
  */
 
-int is_integer(const char *str)
+int is_int(const char *str)
 {
 /*check if string is NULL or if pointer points to a null terminator */
 

@@ -9,20 +9,20 @@
 
 void pop(stack_t **stack, unsigned int line_number)
 {
-	stack_t *temp; /*temporary variable assigned*/
+	stack_t *tmp; /*temporary variable assigned*/
 
 	if (*stack == NULL) /*checks if stack is empty*/
 	{
 		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	temp = *stack;/*assigns temp the value of the top element of stack*/
+	tmp = *stack;/*assigns temp the value of the top element of stack*/
 	/*stack ptr updated to point to the next stack on the list*/
 	*stack = (*stack)->next;
 	if (*stack != NULL) /* set ptr to NULL if there is a new top element*/
 	(*stack)->prev = NULL;
 
-	free(temp);
+	free(tmp);
 }
 
 /**
@@ -38,7 +38,7 @@ void push(stack_t **stack, unsigned int line_number, char *argument)
 	int digit;
 
 	/*check if value is a valid int, and if it exists*/
-	if (argument == NULL || !is_integer(argument))
+	if (argument == NULL || !is_int(argument))
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
