@@ -15,7 +15,7 @@ void add(stack_t **stack, unsigned int line_number)
 	int second;
 
 	/*check if stack is has 2 elements*/
-	if ((*stack)->next == NULL || (*stack == NULL))
+	if ((*stack == NULL) || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%u: can't sub, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
