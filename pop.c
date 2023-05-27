@@ -38,7 +38,7 @@ void push(stack_t **stack, unsigned int line_number, char *argument)
 	int digit;
 
 	/*check if value is a valid int, and if it exists*/
-	if (!is_integer(argument) || argument == NULL)
+	if (argument == NULL || !is_integer(argument))
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
