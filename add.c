@@ -52,7 +52,7 @@ void sub(stack_t **stack, unsigned int line_number)
 	top = (*stack)->n;
 	bottom = (*stack)->next->n;
 
-	get_sub = top - bottom;
+	get_sub = bottom - top;
 
 	/*remove the top element using pop()*/
 	pop(stack, line_number);
