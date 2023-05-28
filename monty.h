@@ -52,7 +52,7 @@ void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void free_mem(FILE *file, char *line, stack_t **stack);
 int is_int(const char *str);
-
+void quotient(stack_t **stack, unsigned int line_number);
 
 
 

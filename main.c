@@ -25,12 +25,12 @@ int main(int argc, char *argv[])
 
 void execute_file(const char *filename)
 {
-	FILE *file;
 	char *line;
 	unsigned int line_number;
 	char *opcode, *argument;
 	size_t length = 0;
 	ssize_t read;
+	FILE *file;
 	stack_t *stack = NULL;
 
 	file = fopen(filename, "r");
