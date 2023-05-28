@@ -20,7 +20,7 @@ void quotient(stack_t **stack, unsigned int line_number)
 	top = (*stack)->n;
 	bottom = (*stack)->next->n;
 
-	get_div = bottom / top;
+	get_div = top / bottom;
 
 	/*remove the top element using pop()*/
 	pop(stack, line_number);
