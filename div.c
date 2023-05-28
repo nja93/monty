@@ -25,4 +25,10 @@ void quotient(stack_t **stack, unsigned int line_number)
 	/*remove the top element using pop()*/
 	pop(stack, line_number);
 	(*stack)->n = get_div; /*reassign the value of top element*/
-}
+
+
+	if (get_div == 0)
+	{
+		fprintf(stderr, "L%u: division by zero\n", line_number);
+		exit(EXIT_FAILURE);
+	}
